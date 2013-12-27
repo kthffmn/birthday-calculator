@@ -65,7 +65,7 @@ class Birthday
 	end
 
 	def age?
-		bd = birthday[0..3].to_i
+		bd = birthday[0..3]
 		if bd == this_year
 			age = this_year.to_i - bd_yyyy.to_i
 		else
