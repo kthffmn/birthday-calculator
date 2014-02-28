@@ -7,23 +7,24 @@ require 'time'
 class Birthday
 	attr_accessor :time, :birthday, :this_year, :bd_yyyy
 
-	def initialize(bd_yyyymmdd)	# for instance: Birthday.new("19890618")
-		@time = Time.new.strftime("%Y%m%d")	# today this will return "20131218"
-		##########################################################################
+	def initialize(bd_mm_dd_yyyy)       	# for instance: Birthday.new("12/19/2014")
+		@time = Time.new.strftime("%Y%m%d")	# today this will return date in "20131218" format
+		
+		# year, both this on and next one
 		@this_year = @time[0..3]	# gets today's year ("2013")
-
 		i_year = @this_year.to_i	# gets next year part 1/3
-		year = i_year + 1	# gets next year part 2/3
-		next_year = year.to_s	# gets next year part 3/3 ("2014")
+		year = i_year + 1	        # gets next year part 2/3
+		next_year = year.to_s	    # gets next year part 3/3 ("2014")
 
+		# current month and day
 		this_month = @time[4..5]		# gets today's month ("12")
 		this_day = @time[-2..-1]		# gets today's day ("23")
 
-		@bd_yyyy = bd_yyyymmdd[0..3] # gets birthday year ("1944")
-		bd_mmdd = bd_yyyymmdd[4..-1]	# strip year off birthday date 
-		bd_mm = bd_mmdd[0..1]	# gets birthday month ("12")
-		bd_dd = bd_mmdd[-2..-1]		# gets birthday day ("28")
-
+		# birthday year, month, and day
+		@bd_yyyy = bd_mm_dd_yyyy[-4..-1] # gets birthday year ("1944")
+		bd_mm = bd_mm_dd_yyyy[0..1]	     # gets birthday month ("12")
+		bd_dd = bd_mm_dd_yyyy[3..4]		   # gets birthday day ("28")
+		bd_mmdd = bd_mm + bd_dd          # preps the month and day of bd for the year
 
 		if bd_mm > this_month
 			birthday_var = bd_mmdd.insert(0, this_year)
