@@ -1,21 +1,49 @@
 @import url(http://fonts.googleapis.com/css?family=Pacifico);
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+
+p {
+  font-size: 1.5em;
+}
+
+.age {
+  margin-bottom: 20px;
+}
+
+.days {
+  margin-bottom: 20px;
+}
 
 .buttonz {
   position: absolute;
   display: inline-block;
   background-color: skyblue;
   color: white;
-  width: 90px;
-  height: 40px;
+
   border-radius: 5px;
   box-shadow: none;
   border: none;
   font-size: 1em;
-  left: 60px;
+}
+
+.hommies {
+
 }
 
 .buttonz:hover{
-  background-color: blue;
+  background-color: #79BAEC;
+}
+
+.calculate {
+  width: 110px;
+  left: 50px;
+  height: 40px;
+}
+
+.home {
+  height: 30px;
+  width: 90px;
+  left: 90px;
+  vertical-align: middle;
 }
 
 h1 {
@@ -36,3 +64,16 @@ h1 {
   position: relative;
   text-align: center;
 }
+
+a:visited {
+  text-decoration:none;
+  color: white;
+}
+
+
+a:hover {
+  text-decoration:none;
+  color: white;
+}
+
+a:active {text-decoration:none;}
