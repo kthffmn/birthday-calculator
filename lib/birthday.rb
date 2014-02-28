@@ -24,7 +24,7 @@ class Birthday
 		bd_mm = bd_mmdd[0..1]	# gets birthday month ("12")
 		bd_dd = bd_mmdd[-2..-1]		# gets birthday day ("28")
 
-		
+
 		if bd_mm > this_month
 			birthday_var = bd_mmdd.insert(0, this_year)
 		elsif bd_mm == this_month				
@@ -79,7 +79,3 @@ class Birthday
 	end
 
 end
-
-# my_bd = Birthday.new("19890618")
-# puts my_bd.birthday?.inspect
-# puts my_bd.age?.inspect

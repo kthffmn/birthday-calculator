@@ -1,9 +1,21 @@
 <h1>Birthday Calculator</h1>
-<form action="/calculate" method="POST">
 
-  <label for="birthday">Birthday Date (YYYYMMDD):</label>
-  <input id="birthday" type="text" name="birthday" maxlength="8">
+<div class="outercontainer">
+  <div class="innercontainer">
+    <form action="/calculate" method="POST">
+      <label for="birthday">Birthday date:</label>
+      <input id="datepicker" type="text" name="birthday">
+      <button type="submit" value="submit" class="buttonz">Calculate!</button>
+      <a href="/calculate"> </a>
+    </form>
+  </div>
+</div>
 
-  <button type="submit" value="submit">Calculate!</button>
-
-<a href="/calculate"> </a>
+<script type="text/javascript">
+    $(document).ready(function(){
+      $( "#datepicker" ).datepicker({
+        changeMonth: true,
+        changeYear: true
+      });
+    });
+</script>

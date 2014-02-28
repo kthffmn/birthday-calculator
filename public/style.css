@@ -1,54 +1,37 @@
-body {
-	color: black;
-	background-color: white;
-	font-size: 1.5em;
-	line-height: 1.4em;
-	background-image: url("./bricks.jpg")
+@import url(http://fonts.googleapis.com/css?family=Pacifico);
+
+.buttonz {
+  position: absolute;
+  display: inline-block;
+  background-color: skyblue;
+  color: white;
+  width: 90px;
+  height: 40px;
+  border-radius: 5px;
+  box-shadow: none;
+  border: none;
+  font-size: 1em;
+  left: 60px;
 }
 
+.buttonz:hover{
+  background-color: blue;
+}
 
 h1 {
-	text-align: center;
-	font-family: Times, serif;
+  font-family: 'Pacifico', cursive;
+  text-align: center;
 }
 
-p {
-	margin-top: 5%;
-	margin-bottom: 5%;
-	font-family: Times, serif;}
+.outercontainer {
+  text-align: center;
+  height: 120px;
+  margin-top: 25px;
 }
 
-img {
-	border: 3px solid white;
-    display: block;
-	margin: 0 auto;
+.innercontainer {
+  height: 120px;
+  display: inline-block;
+  position: relative;
+  text-align: center;
 }
-
-.content {
-	width: 75%;
-	margin: 0 auto;
-	text-align: center;
-	margin-top: 100px;
-}
-
-.footer a {     
-	/*display: inline;*/
-	margin: 0 auto;
-    padding: 7px;
-    margin-left: 13%;
-    font-family: Times, serif;
-    color: #cccccc;
-}
-.footer {
-	margin-left: 16%;
-}
-
-a:link {
-	color:#D80000 ;
-    font-family: Times, serif;
-}
-a:visited {
-	color:#D80000;
-    font-family: Times, serif;
-} /* visited link */ 
-a:hover {text-decoration:underline;}
